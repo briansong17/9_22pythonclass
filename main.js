@@ -83,3 +83,8 @@ $('open-art').addEventListener('click',()=>$('art-dialog').showModal());$('close
 refresh();
 
 
+
+// 교범의 생존 수칙을 교관 말풍선과 동기화합니다.
+const instructorRenderManual=renderManual;
+renderManual=function(data){instructorRenderManual(data);$('instructor-tip').textContent=data.guide?'신병, 기억해라! '+guides[data.guide].rule:'자, 신병! 위에서 적을 골라라. 시험은 객관식인데 실전은 부활 버튼이 없다.';};
+refresh();
